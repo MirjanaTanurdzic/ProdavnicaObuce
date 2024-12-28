@@ -1,0 +1,35 @@
+﻿<script src="~/Scripts/script.js"></script>
+@model ProdavnicaObuceM.Models.mainModel
+@{
+    ViewBag.Title = "NarudzbaM";
+}
+<div class="body-narudzbaM">
+    <h1>Naručite ovde:</h1>
+    <br />
+    <div>
+        @using (Html.BeginForm("NarudzbaM", "Pages", FormMethod.Post, new { @class = "forma" }))
+        {
+            <fieldset>
+                <legend>Narudžbenica</legend>
+                <p>Naziv proizvoda: @Html.TextBoxFor(x => x.MuskaObuca.Naziv, new { @readonly = "readonly" }) </p>
+                <p>Brend: @Html.TextBoxFor(x => x.MuskaObuca.Brend, new { @readonly = "readonly" })</p>
+                <p>Cena: @Html.TextBoxFor(x => x.MuskaObuca.Cena, new { @readonly = "readonly" })</p>
+                <p>Tip obuce: @Html.DropDownListFor(x => x.MuskaObuca.Tip, new[] {
+                new SelectListItem(){Text="Muška obuća", Value="Muška obuća"},
+                new SelectListItem(){Text="Ženska obuća", Value="Ženska obuća"},
+                new SelectListItem(){Text="Dečija obuća", Value="Dečija obuća"}}, " ")
+                </p>
+                <p>Muški broj (40-48): @Html.TextBoxFor(x=> x.MuskaObuca.MuskiBroj)</p>
+                <p>Ime i prezime: @Html.TextBoxFor(x => x.MuskaObuca.ImePrezime)</p>
+                <p>Email: @Html.TextBoxFor(x => x.MuskaObuca.Email)</p>
+                <p>Mobilni: @Html.TextBoxFor(x => x.MuskaObuca.Mobilni)</p>
+                <p>Adresa: @Html.TextBoxFor(x => x.MuskaObuca.Adresa)</p>
+                <p>Grad: @Html.TextBoxFor(x => x.MuskaObuca.Grad)</p>
+                <p>@Html.CheckBoxFor(x => x.MuskaObuca.Pravilnik) Saglasan/na sam sa uslovima i pravilima korišćenja.</p>
+                <br />
+                <input type="submit" value="Naruči" id="s-naruci" />
+            </fieldset>
+        }
+    </div>
+</div>
+

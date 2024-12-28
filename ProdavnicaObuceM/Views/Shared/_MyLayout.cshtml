@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUZZ/@ViewBag.Title</title>
+    <link rel="icon" href="~/Content/slike/icon.png" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/script.js"></script>
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/Page.css")
+</head>
+<body>
+    <nav>
+      <a class="logo" href="@Url.Action("Pocetna","Pages")"><img src="@Url.Content("~/Content/slike/logo.png")"/></a>
+      <ul>
+        <li>@Html.ActionLink("MUŠKARCI", "Muska", "Obuca")</li>
+        <li>@Html.ActionLink("ŽENE", "Zenska", "Obuca")</li>
+        <li>@Html.ActionLink("DECA", "Decija", "Obuca")</li>
+        <li>@Html.ActionLink("BRENDOVI", "Brendovi", "Pages")</li>
+      </ul>
+    </nav>
+    <div class="body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="gornji-footer">
+            <img class="footer-logo" src="~/Content/slike/jordan.png" />
+            <div class="mreze">
+                <h5>
+                    LET'S SOCIALIZE
+                </h5>
+                <a class="mreze-item" href="https://www.facebook.com"><img src="~/Content/slike/fb.png" /></a>
+                <a class="mreze-item" href="https://www.instagram.com"><img src="~/Content/slike/insta.png" /></a>
+                <a class="mreze-item" href="https://www.youtube.com"><img src="~/Content/slike/yt.png" /></a>
+                <a class="mreze-item" href="https://www.tiktok.com"><img src="~/Content/slike/tiktok.png" /></a>
+            </div>
+            </div>
+            <p>©@DateTime.Now.Year Mirjana Tanurdžić IT15/22</p>
+        </footer>
+    </div>
+</body>
+</html>

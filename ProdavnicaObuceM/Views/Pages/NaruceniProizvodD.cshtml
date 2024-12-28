@@ -1,0 +1,78 @@
+﻿@model ProdavnicaObuceM.Models.mainModel
+<div class="body-proizvodiD">
+    @{
+        var poruka1 = ", hvala Vam što naručujete kod nas.";
+        var pravilnik = "";
+        if (Model.DecijaObuca.Pravilnik == true)
+        {
+            pravilnik = "Da";
+        }
+        else
+        {
+            pravilnik = "Ne";
+        }
+    }
+    <h4>@Model.DecijaObuca.ImePrezime @poruka1</h4>
+    <h1>Sadržaj Vaše narudžbine:</h1>
+    <table>
+        <tr>
+            <th>Ime i prezime</th>
+            <td>@Model.DecijaObuca.ImePrezime</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>@Model.DecijaObuca.Email</td>
+        </tr>
+        <tr>
+            <th>Mobilni</th>
+            <td>@Model.DecijaObuca.Mobilni</td>
+        </tr>
+        <tr>
+            <th>Adresa</th>
+            <td>@Model.DecijaObuca.Adresa</td>
+        </tr>
+        <tr>
+            <th>Grad</th>
+            <td>@Model.DecijaObuca.Grad</td>
+        </tr>
+        <tr>
+            <th>Saglasnost</th>
+            <td>@pravilnik</td>
+        </tr>
+        <tr>
+            <th>Naziv proizvoda</th>
+            <td>@Model.DecijaObuca.Naziv</td>
+        </tr>
+        <tr>
+            <th>Brend</th>
+            <td>@Model.DecijaObuca.Brend</td>
+        </tr>
+        <tr>
+            <th>Cena</th>
+            <td>@Model.DecijaObuca.Cena</td>
+        </tr>
+        <tr>
+            <th>Tip</th>
+            <td>@Model.DecijaObuca.Tip</td>
+        </tr>
+        <tr>
+            <th>Uzrast</th>
+            <td>@Model.DecijaObuca.Uzrast</td>
+        </tr>
+        <tr>
+            <th>Dečiji broj</th>
+            <td>@Model.DecijaObuca.DecijiBroj</td>
+        </tr>
+        <tr>
+            <th>Slika</th>
+            <td>
+                @{
+                    string nazSlike = Model.DecijaObuca.Naziv.ToLower();
+                    string src = Url.Content($"~/Content/dpatike/{nazSlike}.jpg");
+                }
+                @ProdavnicaObuceM.Helper.Helper.slikaHelper(src)
+            </td>
+        </tr>
+    </table>
+</div>
+

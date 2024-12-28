@@ -1,0 +1,74 @@
+﻿@model ProdavnicaObuceM.Models.mainModel
+<div class="body-proizvodiZ">
+    @{
+        var poruka1 = ", hvala Vam što naručujete kod nas.";
+        var pravilnik = "";
+        if (Model.ZenskaObuca.Pravilnik == true)
+        {
+            pravilnik = "Da";
+        }
+        else
+        {
+            pravilnik = "Ne";
+        }
+    }
+    <h4>@Model.ZenskaObuca.ImePrezime @poruka1</h4>
+    <h1>Sadržaj Vaše narudžbine:</h1>
+    <table>
+        <tr>
+            <th>Ime i prezime</th>
+            <td>@Model.ZenskaObuca.ImePrezime</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>@Model.ZenskaObuca.Email</td>
+        </tr>
+        <tr>
+            <th>Mobilni</th>
+            <td>@Model.ZenskaObuca.Mobilni</td>
+        </tr>
+        <tr>
+            <th>Adresa</th>
+            <td>@Model.ZenskaObuca.Adresa</td>
+        </tr>
+        <tr>
+            <th>Grad</th>
+            <td>@Model.ZenskaObuca.Grad</td>
+        </tr>
+        <tr>
+            <th>Saglasnost</th>
+            <td>@pravilnik</td>
+        </tr>
+        <tr>
+            <th>Naziv proizvoda</th>
+            <td>@Model.ZenskaObuca.Naziv</td>
+        </tr>
+        <tr>
+            <th>Brend</th>
+            <td>@Model.ZenskaObuca.Brend</td>
+        </tr>
+        <tr>
+            <th>Cena</th>
+            <td>@Model.ZenskaObuca.Cena</td>
+        </tr>
+        <tr>
+            <th>Tip</th>
+            <td>@Model.ZenskaObuca.Tip</td>
+        </tr>
+        <tr>
+            <th>Ženski broj</th>
+            <td>@Model.ZenskaObuca.ZenskiBroj</td>
+        </tr>
+        <tr>
+            <th>Slika</th>
+            <td>
+                @{
+                    string nazSlike = Model.ZenskaObuca.Naziv.ToLower();
+                    string src = Url.Content($"~/Content/zpatike/{nazSlike}.jpg");
+                }
+                @ProdavnicaObuceM.Helper.Helper.slikaHelper(src)
+            </td>
+        </tr>
+    </table>
+</div>
+

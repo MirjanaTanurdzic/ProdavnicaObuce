@@ -1,0 +1,342 @@
+﻿body{
+    font-family: 'BankGothic Lt BT';
+}
+nav {
+    height: 130px;
+    background-color: white; 
+    padding: 10px 20px; 
+    display: flex; 
+    align-items: center;
+    border-bottom: 20px solid black;
+}
+nav .logo img {
+    height: 100px; 
+    width: auto;
+    margin-right: 70px;
+    padding-left: 20px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    flex-direction: row;
+    gap: 50px; 
+}
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    text-decoration: none; 
+    color: black; 
+    font-size: 22px; 
+    font-weight: bold; 
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ff5800; 
+}
+footer {
+    background-color: white;
+    color: black;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+footer .gornji-footer{
+    display:flex;
+}
+footer .footer-logo {
+    height: 80px; 
+    width: auto; 
+    margin-right: 850px;
+}
+footer .mreze h5 {
+    text-align: left;
+    font-size: 17px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    color: black;
+}
+footer .mreze-item {
+    margin: 0 5px; 
+    background: black;
+    padding: 5px;
+    border-radius: 10px;
+    display: inline-block; 
+}
+footer .mreze-item img {
+    width: 30px; 
+    height: 30px;
+    transition: transform 0.3s ease-in-out; 
+}
+footer .mreze-item img:hover {
+    transform: scale(1.1); 
+}
+footer p {
+    font-size: 14px;
+    color: #555; 
+    text-align: center; 
+    width: 100%; 
+}
+.body-pocetna {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body-pocetna > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+.pocetna-pol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; 
+    padding: 20px;
+}
+.pocetna-pol > a {
+    flex: 1 1 calc(33.333% - 20px);
+    text-decoration: none;
+}
+.pocetna-pol img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.pocetna-pol h4 {
+    font-size: 17px;
+    text-align: center;
+    color: black;
+}
+.pocetna-marka {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+.pocetna-marka .marka {
+    flex: 1 1 calc(33.333% - 20px); 
+}
+
+.pocetna-marka img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.pocetna-marka h4 {
+    font-size: 17px;
+    color: black;
+    text-align:center;
+}
+
+.pocetna-marka p {
+    font-size: 14px;
+    color: #666;
+    text-align:center;
+}
+.pocetna-brend {
+    display: flex;
+    overflow-x: auto; 
+    gap: 120px;
+    padding: 20px;
+    margin-left: 20px;
+    scroll-behavior: smooth;
+}
+.pocetna-brend img {
+    flex: 0 0 calc(16.666% - 120px); 
+    max-width: 100%;
+    height: auto;
+}
+.pocetna-brend::-webkit-scrollbar {
+    height: 4px;
+    background: #d7d7d7
+}
+.pocetna-brend::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+.body-muskaO {
+    background: white;
+    text-align: center;
+}
+.body-muskaO img:first-of-type {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.body-muskaO h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    color: black;
+}
+.muskaO {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+.patikeM {
+    width: 22%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.patikeM:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgb(0, 0, 0, 0.2);
+}
+.patikeM img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+ }
+.patikeM p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+.body-zenskaO {
+    background: white;
+    text-align: center;
+}
+.body-zenskaO img:first-of-type {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.body-zenskaO h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    color: black;
+}
+.zenskaO {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+.patikeZ {
+    width: 22%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.patikeZ:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgb(0, 0, 0, 0.2);
+}
+.patikeZ img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.patikeZ p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+.body-decijaO {
+    background: white;
+    text-align: center;
+}
+.body-decijaO img:first-of-type {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.body-decijaO h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+    color: black;
+}
+.decijaO {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+}
+.patikeD {
+    width: 22%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.patikeD:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgb(0, 0, 0, 0.2);
+}
+.patikeD img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.patikeD p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+.body-brendovi {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    background: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+.body-brendovi h1 {
+    width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+}
+.body-brendovi .brend {
+    display: flex;
+    justify-content:center;
+    flex-direction:row;
+    width: 20%;
+    height: 150px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+.body-brendovi .brend img {
+    width: 50%;
+    height: auto;
+}
+.body-brendovi .brend:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgb(0, 0, 0, 0.2);
+}
